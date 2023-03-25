@@ -38,6 +38,8 @@
 </template>
 
 <script>
+// import axios from 'axios'
+
 export default {
   data() {
     return {
@@ -60,6 +62,10 @@ export default {
       //   rating: this.chosenRating,
       // });
 
+////////////////////////////////////////////////////////////////////////////////
+      // How to use the Fetch and Axios Method
+
+      // FETCH METHOD
       fetch('https://vue-http-demo-353cf-default-rtdb.firebaseio.com/surveys.json', {
         method: 'POST',
         headers: {
@@ -70,6 +76,14 @@ export default {
           rating: this.chosenRating
         }),
       });
+
+      // AXIOS METHOD
+        // axios.post('https://vue-http-demo-353cf-default-rtdb.firebaseio.com/', {
+        //   name: this.enteredName,
+        //   rating: this.chosenRating,
+        // });
+
+////////////////////////////////////////////////////////////////////////////////
 
       this.enteredName = '';
       this.chosenRating = null;
